@@ -2,8 +2,9 @@ const axios = require("axios");
 const fs = require("fs");
 
 class GenerateImage {
-  constructor(token) {
+  constructor(token, obj) {
     if (!token) throw new Error("Token is required");
+    if (!obj?.stfu) console.warn("May need for fixes")
     this.token = token;
     this.headers = {
       authorization: `Bearer ${this.token}`,

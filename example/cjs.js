@@ -1,7 +1,8 @@
 const GenerateImage = require("../src/cjs/index.js");
 // const GenerateImage = require("tensor.fart");
 
-const generate = new GenerateImage("Authorization_Bearer");
+const generate = new GenerateImage("Authorization_Bearer", { stfu: true });
+// {stfu} disables the warning message
 
 const data = {
   baseModel: {

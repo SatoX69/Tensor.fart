@@ -1,7 +1,8 @@
 import GenerateImage from "../src/cjs/index.js";
 // import GenerateImage from "tensor.fart";
 
-const generate = new GenerateImage("Authorization_Bearer");
+const generate = new GenerateImage("Authorization_Bearer", { stfu: true });
+// {stfu} disables the warning message
 
 const data = {
   baseModel: {

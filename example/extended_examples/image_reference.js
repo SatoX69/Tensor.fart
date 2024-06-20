@@ -1,4 +1,4 @@
-const GenerateImage = require("../src/cjs/index.js");
+const GenerateImage = require("../../src/cjs/index.js");
 // const GenerateImage = require("tensor.fart");
 
 const generate = new GenerateImage("Authorization_Bearer");

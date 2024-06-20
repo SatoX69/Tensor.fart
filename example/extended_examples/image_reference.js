@@ -1,7 +1,7 @@
-const generateImage = require("../src/cjs/index.js");
-// const generateImage = require("tensor.fart");
+const GenerateImage = require("../src/cjs/index.js");
+// const GenerateImage = require("tensor.fart");
 
-const generate = new generateImage("Authorization_Bearer");
+const generate = new GenerateImage("Authorization_Bearer");
 
 const data = {
   baseModel: {

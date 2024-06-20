@@ -1,7 +1,7 @@
-import generateImage from "../src/cjs/index.js";
-// import generateImage from "tensor.fart";
+import GenerateImage from "../src/cjs/index.js";
+// import GenerateImage from "tensor.fart";
 
-const generate = new generateImage("Authorization_Bearer");
+const generate = new GenerateImage("Authorization_Bearer");
 
 const data = {
   baseModel: {

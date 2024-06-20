@@ -1,4 +1,4 @@
-const GenerateImage = require('./generateImage');
+const GenerateImage = require("../src/cjs/index.js");
 const token = 'Authorization Bearer';
 
 const generateImage = new GenerateImage(token);

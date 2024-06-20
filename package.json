@@ -1,6 +1,6 @@
 {
   "name": "tensor.fart",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/cjs/index.js",
   "module": "src/esm/index.js",
   "exports": {

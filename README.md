@@ -1,7 +1,3 @@
-Here's an updated `README.md` tailored for the `tensor.fart` npm module:
-
----
-
 # tensor.fart
 
 ## Overview

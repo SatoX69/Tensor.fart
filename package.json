@@ -1,0 +1,25 @@
+{
+  "name": "tensor.fart",
+  "version": "1.0.0",
+  "main": "src/cjs/index.js",
+  "module": "src/esm/index.js",
+  "exports": {
+    ".": {
+      "require": "./src/cjs/index.js",
+      "import": "./src/esm/index.js"
+    }
+  },
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "echo 'Building CJS...' && cp -r src/cjs dist/cjs",
+    "build:esm": "echo 'Building ESM...' && cp -r src/esm dist/esm"
+  },
+  "keywords": ["tensor.art", "ai", "image manipulation", "tensor", "image generator", "stable"],
+  "dependencies": {
+    "axios": "^1.7.2"
+  },
+  "author": "SatoX69",
+  "contributor": "Tanvir",
+  "license": "MIT",
+  "description": "An unofficial tensor.art API"
+}

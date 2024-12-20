@@ -1,12 +1,12 @@
 {
   "name": "tensor.fart",
-  "version": "1.0.1",
-  "main": "src/cjs/index.js",
-  "module": "src/esm/index.js",
+  "version": "2.0.0",
+  "main": "v2.0.0/src/cjs/index.js",
+  "module": "v2.0.0/src/esm/index.js",
   "exports": {
     ".": {
-      "require": "./src/cjs/index.js",
-      "import": "./src/esm/index.js"
+      "require": "./v2.0.0/src/cjs/index.js",
+      "import": "./v2.0.0/src/esm/index.js"
     }
   },
   "scripts": {
@@ -26,7 +26,6 @@
     "axios": "^1.7.2"
   },
   "author": "SatoX69",
-  "contributor": "Tanvir",
   "license": "MIT",
   "description": "An unofficial tensor.art API",
   "repository": {

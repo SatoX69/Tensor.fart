@@ -68,9 +68,7 @@ class GenerateImage {
   async getTags() {
     try {
       const response = await axios.post(
-        "https://api.tensor.art/train-web/v1/train-task/tag-other-image",
-        { imageUrl: this.dbUrl },
-        { headers: this.headers }
+        "https://api.tensor.art/train-web/v1/train-task/tag-other-image", { imageUrl: this.dbUrl }, { headers: this.headers }
       );
       return response.data.data.tags;
     } catch (error) {
@@ -80,9 +78,7 @@ class GenerateImage {
 
   async getUploadUrl() {
     const response = await axios.post(
-      "https://api.tensor.art/community-web/v1/cloudflare/upload/pre_sign",
-      { scene: "IMAGE_TO_IMAGE", fileNameSuffix: "jpg" },
-      { headers: this.headers }
+      "https://api.tensor.art/community-web/v1/cloudflare/upload/pre_sign", { scene: "IMAGE_TO_IMAGE", fileNameSuffix: "jpg" }, { headers: this.headers }
     );
     this.uploadURL = response.data.data.uploadUrl;
     return this.uploadURL;
@@ -102,7 +98,7 @@ class GenerateImage {
       });
 
       if (uploadResponse.status !== 200) throw new Error(`Upload failed: ${uploadResponse.statusText}`);
-      
+
       this.dbUrl = uploadResponse.config.url;
       return this.dbUrl;
     } catch (err) {
@@ -121,8 +117,7 @@ class GenerateImage {
         },
         taskType: 'TXT2IMG',
         credits: 1.0,
-      },
-      { headers: this.headers }
+      }, { headers: this.headers }
     );
     this.taskId = taskResponse.data.data.task.taskId;
     return this.taskId;
@@ -135,9 +130,7 @@ class GenerateImage {
 
     while (Date.now() < endTime) {
       const taskResponse = await axios.post(
-        'https://api.tensor.art/works/v1/works/mget_task',
-        { ids: [this.taskId] },
-        { headers: this.headers }
+        'https://api.tensor.art/works/v1/works/mget_task', { ids: [this.taskId] }, { headers: this.headers }
       );
       const task = taskResponse.data.data.tasks[this.taskId];
       if (task.status === 'FINISH') return task.items[0].url;
